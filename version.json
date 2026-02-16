@@ -1,6 +1,6 @@
 {
-  "version": "1.0.5",
-  "url": "https://github.com/YOUR_USERNAME/esp32-radio-firmware/releases/download/v1.0.5/radio_firmware_v1.0.5.bin",
+  "version": "1.0.6",
+  "url": "https://github.com/Tsuflakis/ESP32-Radio-Internet-Streamers/upload/main/radio_firmware_v1.0.6.bin",
   "changelog": "Initial release - Fixed Bluetooth and improved stability"
 }
 ```
@@ -12,8 +12,8 @@
 1. In your repository, click **"Releases"** (right sidebar)
 2. Click **"Create a new release"**
 3. Fill in:
-   - **Tag version:** `v1.0.5` (type it in the box, it will say "Create new tag")
-   - **Release title:** `Version 1.0.5`
+   - **Tag version:** `v1.0.6` (type it in the box, it will say "Create new tag")
+   - **Release title:** `Version 1.0.6`
    - **Description:** 
 ```
    ## Changes
@@ -22,4 +22,4 @@
    - Added automatic update checking
    
    ## Installation
-   Download `radio_firmware_v1.0.5.bin` and upload via web interface
+   Download `radio_firmware_v1.0.6.bin` and upload via web interface
