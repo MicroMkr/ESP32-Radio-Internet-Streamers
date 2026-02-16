@@ -1,0 +1,25 @@
+{
+  "version": "1.0.5",
+  "url": "https://github.com/YOUR_USERNAME/esp32-radio-firmware/releases/download/v1.0.5/radio_firmware_v1.0.5.bin",
+  "changelog": "Initial release - Fixed Bluetooth and improved stability"
+}
+```
+
+**Replace `YOUR_USERNAME`** with your actual GitHub username.
+
+### 3. Create the Release
+
+1. In your repository, click **"Releases"** (right sidebar)
+2. Click **"Create a new release"**
+3. Fill in:
+   - **Tag version:** `v1.0.5` (type it in the box, it will say "Create new tag")
+   - **Release title:** `Version 1.0.5`
+   - **Description:** 
+```
+   ## Changes
+   - Fixed Bluetooth connection issues
+   - Improved audio stability
+   - Added automatic update checking
+   
+   ## Installation
+   Download `radio_firmware_v1.0.5.bin` and upload via web interface
