@@ -1,6 +1,6 @@
 {
   "version": "1.0.6",
-  "url": "https://github.com/Tsuflakis/ESP32-Radio-Internet-Streamers/upload/main/radio_firmware_v1.0.6.bin",
+  "url": "https://github.com/Tsuflakis/ESP32-Radio-Internet-Streamers/blob/main/radio_firmware_v1.0.6.bin",
   "changelog": "Initial release - Fixed Bluetooth and improved stability"
 }
 ```
