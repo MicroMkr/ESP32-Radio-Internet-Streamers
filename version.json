@@ -1,25 +1,56 @@
 {
   "version": "1.0.6",
-  "url": "https://github.com/Tsuflakis/ESP32-Radio-Internet-Streamers/blob/main/radio_firmware_v1.0.6.bin",
-  "changelog": "Initial release - Fixed Bluetooth and improved stability"
+  "url": "https://github.com/YOUR_USERNAME/esp32-radio-firmware/releases/download/v1.0.6/radio_firmware_v1.0.6.bin",
+  "changelog": "What you changed in this version"
 }
 ```
 
-**Replace `YOUR_USERNAME`** with your actual GitHub username.
+### 4. Create New GitHub Release
 
-### 3. Create the Release
+1. Go to your GitHub repository
+2. Click **"Releases"** → **"Draft a new release"**
+3. **Tag version:** `v1.0.6`
+4. **Release title:** `Version 1.0.6`
+5. **Description:** Write what changed
+6. **Upload files:**
+   - `radio_firmware_v1.0.6.bin`
+   - `version.json`
+7. Click **"Publish release"**
 
-1. In your repository, click **"Releases"** (right sidebar)
-2. Click **"Create a new release"**
-3. Fill in:
-   - **Tag version:** `v1.0.6` (type it in the box, it will say "Create new tag")
-   - **Release title:** `Version 1.0.6`
-   - **Description:** 
+---
+
+## Summary - What Changes:
+
+| Item | Old | New |
+|------|-----|-----|
+| Code: `firmwareVersion` | `"1.0.5"` | `"1.0.6"` |
+| Code: `UPDATE_CHECK_URL` | `.../v1.0.5/version.json` | `.../v1.0.6/version.json` |
+| File: `.bin` filename | `radio_firmware_v1.0.5.bin` | `radio_firmware_v1.0.6.bin` |
+| File: `version.json` version | `"1.0.5"` | `"1.0.6"` |
+| File: `version.json` url | `.../v1.0.5/...bin` | `.../v1.0.6/...bin` |
+| GitHub: Tag | `v1.0.5` | `v1.0.6` |
+
+---
+
+## Important:
+
+- ✅ **Always increment the version number** (1.0.5 → 1.0.6 → 1.0.7)
+- ✅ **Keep the v prefix** in GitHub tags (`v1.0.6`)
+- ✅ **Update both** the code and `version.json`
+- ✅ Users on v1.0.5 will see "New version available!" and can click to update
+
+---
+
+## Pro Tip:
+
+Keep a checklist file in your project folder:
 ```
-   ## Changes
-   - Fixed Bluetooth connection issues
-   - Improved audio stability
-   - Added automatic update checking
-   
-   ## Installation
-   Download `radio_firmware_v1.0.6.bin` and upload via web interface
+RELEASE CHECKLIST v1.0.6
+☐ Change firmwareVersion = "1.0.6" in code
+☐ Change UPDATE_CHECK_URL to v1.0.6
+☐ Compile and get .bin file
+☐ Rename .bin to radio_firmware_v1.0.6.bin
+☐ Update version.json (version + url)
+☐ Create GitHub release v1.0.6
+☐ Upload both files
+☐ Test: Check for Updates on old device
