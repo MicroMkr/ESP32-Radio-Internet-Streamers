@@ -1,5 +1,5 @@
 {
   "version": "V28",
   "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V28/radio_firmware_V28.bin",
-  "changelog": "What you changed in this version"
+  "changelog": "OTA download direct from the repository"
 }
