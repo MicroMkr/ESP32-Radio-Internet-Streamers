@@ -1,5 +1,6 @@
 {
-  "version": "V30RE",
-  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V30RE/radio_firmware_rotary_V30RE.bin",
+  "version": "V31RE",
+  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V31RE/radio_firmware_rotary_V31RE.bin",
   "changelog": "Rotary encoder variant update"
+
 }
