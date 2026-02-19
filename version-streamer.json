@@ -1,7 +1,8 @@
 {
-  "version": "V0.54",
-  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V0.54/MyBT_Radio_Streamer_V0.54.bin",
+  "version": "My_BT_Streamer",
+  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/My_BT_Streamer/MyBT_Radio_Streamer_V0.54.bin",
   "changelog": "Rotary encoder variant update"
 
 
 }
+
