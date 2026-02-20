@@ -1,0 +1,5 @@
+{
+  "version": "V31BT",
+  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V31BT/radio_firmware_V31BT.bin",
+  "changelog": "OTA download direct from the repository"
+}
