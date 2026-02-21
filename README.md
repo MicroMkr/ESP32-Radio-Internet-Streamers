@@ -19,7 +19,7 @@ Important Note: To enable the sound it is required to purchase a license key
 Note: The Radio was designed to work only with ESP32S3 Lilygo t-displayS3 Touch or an ESP32-S3 and 170x320 touch screen that share the same caracteristics
 
 
-You can watch the Radio various versions and evolution youtube videos here:
+You can watch the Radio various versions and evolution here:
 
 https://www.youtube.com/@tmicromaker
 
