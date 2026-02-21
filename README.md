@@ -5,7 +5,8 @@
 
 ![IMG_3576](https://github.com/user-attachments/assets/ca0a1ff1-3cd8-4685-a9a8-28e3d01f89e3)
 
-A repository where you can find the documantation, various firmware version and the enclosures 3D files, : https://tinyurl.com/4yduvmdj
+A repository where you can find the documantation, various firmware version and the enclosures 3D files, : 
+https://tinyurl.com/4yduvmdj
 
 <img width="228" height="228" alt="image" src="https://github.com/user-attachments/assets/e6c9b7a2-3e71-4442-8183-ced2320a94c2" />
 
