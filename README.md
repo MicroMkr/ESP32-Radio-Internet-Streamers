@@ -24,7 +24,7 @@ https://youtu.be/gyk2eq8ZymM?feature=shared
 
 https://www.youtube.com/watch?v=cFctgusRfhY
 
-My repository: https://tinyurl.com/4yduvmdj
+A repository where you can find the documantation, various firmware version and the enclosures 3D files, : https://tinyurl.com/4yduvmdj
 
 <img width="228" height="228" alt="image" src="https://github.com/user-attachments/assets/e6c9b7a2-3e71-4442-8183-ced2320a94c2" />
 
