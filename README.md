@@ -101,7 +101,7 @@ There is also a bluetooth version (without a speaker):
 you can watch the video here:
 
 
-[![▶ Watch the video](https://i9.ytimg.com/vi/UsdidMPg164/maxresdefault.jpg)](https://youtu.be/UsdidMPg164))
+[![▶ Watch the video](https://i9.ytimg.com/vi_webp/UsdidMPg164/mqdefault.webp?v=69a4ca24&sqp=CKCTk80G&rs=AOn4CLAiW8gmMZz_3K2KjQ3we_rY3myKoQ)](https://youtu.be/UsdidMPg164))
 
 
 [![▶ Watch the video](https://img.youtube.com/vi/jb2SspnF-nk/hqdefault.jpg)](https://youtu.be/jb2SspnF-nk)
