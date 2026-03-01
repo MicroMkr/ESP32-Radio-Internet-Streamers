@@ -98,7 +98,7 @@ There is also a bluetooth version (without a speaker):
 
 <img width="1139" height="757" alt="BTModule1" src="https://github.com/user-attachments/assets/d68579f1-50c5-45b5-9e58-e8899d4142c4" />
 
-you can watch the video here:
+You can watch the videos by clicking on the below videos:
 
 
 [![▶ Watch the video](https://i9.ytimg.com/vi_webp/UsdidMPg164/mqdefault.webp?v=69a4ca24&sqp=CKCTk80G&rs=AOn4CLAiW8gmMZz_3K2KjQ3we_rY3myKoQ)](https://youtu.be/UsdidMPg164)
