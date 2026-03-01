@@ -101,10 +101,10 @@ There is also a bluetooth version (without a speaker):
 you can watch the video here:
 
 
-[![▶ Watch the video](https://i9.ytimg.com/vi_webp/UsdidMPg164/mqdefault.webp?v=69a4ca24&sqp=CKCTk80G&rs=AOn4CLAiW8gmMZz_3K2KjQ3we_rY3myKoQ)](https://youtu.be/UsdidMPg164))
+[![▶ Watch the video](https://i9.ytimg.com/vi_webp/UsdidMPg164/mqdefault.webp?v=69a4ca24&sqp=CKCTk80G&rs=AOn4CLAiW8gmMZz_3K2KjQ3we_rY3myKoQ)](https://youtu.be/UsdidMPg164)
 
 
-[![▶ Watch the video](https://img.youtube.com/vi/jb2SspnF-nk/hqdefault.jpg)](https://youtu.be/jb2SspnF-nk)
+[![▶ Watch the video](https://i9.ytimg.com/vi_webp/jb2SspnF-nk/mqdefault.webp?v=69a4c9dd&sqp=CKSak80G&rs=AOn4CLA0-gdPMe77tKCUpStJ2oLFzjOb8A)](https://youtu.be/jb2SspnF-nk)
 
 
 
