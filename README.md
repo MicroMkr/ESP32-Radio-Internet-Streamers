@@ -1,4 +1,5 @@
 
+<img width="1536" height="1024" alt="Retro radio vibes with The MicroMaker" src="https://github.com/user-attachments/assets/b6712378-10d1-46ed-bbf1-5715668e9240" />
 
 This is a fully functional Internet Radio Based on ESP32-S3
 
