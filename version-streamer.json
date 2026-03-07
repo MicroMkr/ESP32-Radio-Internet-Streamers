@@ -1,6 +1,7 @@
 {
-  "version": "V39ST",
-  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V39ST/MyBT_Radio_Streamer_V39ST.bin",
-  "changelog": ""
+  "version": "V40ST",
+  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V40ST/MyBT_Radio_Streamer_V40ST.bin",
+  "changelog": "Volume Curve Updated"
 }
+
 
