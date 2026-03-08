@@ -30,7 +30,8 @@ https://www.youtube.com/@tmicromaker
 There is also a Bluetooth version without ann internal speaker:
 
 
-Installation:
+
+**Installation:**
 
 Flashing ESP Firmware Using the Espressif Web Flash Tool
 
