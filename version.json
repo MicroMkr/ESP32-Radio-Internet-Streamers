@@ -1,5 +1,5 @@
 {
-  "version": "V42",
-  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V42/radio_firmware_V42.bin",
-  "changelog": "Volume Curve Updated"
+  "version": "V43",
+  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V43/radio_firmware_V43.bin",
+  "changelog": "Fixed Boot Shutdown when No Internet Connection "
 }
