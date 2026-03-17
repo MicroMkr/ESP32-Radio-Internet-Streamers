@@ -6,9 +6,6 @@ Internet Radio Based on ESP32-P4 with SPDIF out
 ![IMG_4602](https://github.com/user-attachments/assets/404d861e-c2d5-45e2-b299-c588e6edba75)
 
 
-![IMG_E4618 1](https://github.com/user-attachments/assets/968c3d8f-ccc1-43fb-bc63-2e2f3aa53e0c)
-
-
 This is a fully functional Internet Radio Based on ESP32-S3
 
 ![IMG_3577](https://github.com/user-attachments/assets/19e128bc-b9b6-4e2b-bd15-aea5ab638663)
