@@ -1,6 +1,10 @@
 
 <img width="1536" height="1024" alt="Retro radio vibes with The MicroMaker" src="https://github.com/user-attachments/assets/b6712378-10d1-46ed-bbf1-5715668e9240" />
 
+Internet Radio Based on ESP32-P4 with SPDIF out
+![IMG_E4602](https://github.com/user-attachments/assets/4cd3773d-3270-4802-9332-9e04db0b283a)
+
+
 This is a fully functional Internet Radio Based on ESP32-S3
 
 ![IMG_3577](https://github.com/user-attachments/assets/19e128bc-b9b6-4e2b-bd15-aea5ab638663)
