@@ -1,5 +1,5 @@
 {
   "version": "V45",
   "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V45/radio_firmware_V45.bin",
-  "changelog": "Fixed Boot Shutdown when No Internet Connection "
+  "changelog": "Minor GUI Improvments "
 }
