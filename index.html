@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MicroMaker — ESP32 Radio Flasher</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Barlow:wght@300;400;600;700&display=swap');
+
+  :root {
+    --bg: #0d0f0f;
+    --bg2: #111416;
+    --bg3: #171b1c;
+    --border: #2a2f30;
+    --accent: #f97316;
+    --accent2: #fb923c;
+    --green: #22c55e;
+    --red: #ef4444;
+    --yellow: #eab308;
+    --text: #e2e8f0;
+    --muted: #64748b;
+    --mono: 'Share Tech Mono', monospace;
+    --sans: 'Barlow', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ── Header ── */
+  header {
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--bg2);
+  }
+
+  .logo-mark {
+    width: 36px; height: 36px;
+    border: 2px solid var(--accent);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--accent);
+    letter-spacing: -1px;
+    flex-shrink: 0;
+  }
+
+  header h1 {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  header span {
+    color: var(--accent);
+  }
+
+  .header-badge {
+    margin-left: auto;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    border-radius: 20px;
+  }
+
+  /* ── Main layout ── */
+  main {
+    width: 100%;
+    max-width: 760px;
+    padding: 40px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  /* ── Section cards ── */
+  .card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .card-header {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg3);
+  }
+
+  .step-num {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #000;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .card-header h2 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  /* ── Firmware selector ── */
+  .firmware-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 10px;
+  }
+
+  .fw-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    position: relative;
+    background: var(--bg3);
+  }
+
+  .fw-card:hover {
+    border-color: var(--accent);
+  }
+
+  .fw-card.selected {
+    border-color: var(--accent);
+    background: #1a1208;
+  }
+
+  .fw-card.selected::after {
+    content: '✓';
+    position: absolute;
+    top: 10px; right: 12px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .fw-version {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+
+  .fw-chip {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .fw-changelog {
+    font-size: 11px;
+    color: #94a3b8;
+    font-style: italic;
+  }
+
+  /* ── Options ── */
+  .options-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .toggle-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .toggle-wrap input[type=checkbox] {
+    appearance: none;
+    width: 36px; height: 20px;
+    background: var(--border);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s;
+    flex-shrink: 0;
+  }
+
+  .toggle-wrap input[type=checkbox]::after {
+    content: '';
+    position: absolute;
+    width: 14px; height: 14px;
+    background: var(--muted);
+    border-radius: 50%;
+    top: 3px; left: 3px;
+    transition: transform 0.2s, background 0.2s;
+  }
+
+  .toggle-wrap input[type=checkbox]:checked {
+    background: var(--accent);
+  }
+
+  .toggle-wrap input[type=checkbox]:checked::after {
+    transform: translateX(16px);
+    background: #000;
+  }
+
+  .toggle-label {
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  .toggle-desc {
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  /* ── Baud selector ── */
+  .baud-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .baud-row label {
+    font-size: 13px;
+    color: var(--text);
+    white-space: nowrap;
+  }
+
+  select {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  select:focus { border-color: var(--accent); }
+
+  /* ── Connect / Flash buttons ── */
+  .btn-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.15s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn:active { transform: scale(0.97); }
+  .btn:disabled { opacity: 0.35; cursor: not-allowed; transform: none; }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #000;
+  }
+
+  .btn-primary:not(:disabled):hover { background: var(--accent2); }
+
+  .btn-danger {
+    background: transparent;
+    color: var(--red);
+    border: 1px solid var(--red);
+  }
+
+  .btn-danger:not(:disabled):hover { background: #1a0808; }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+
+  .btn-secondary:not(:disabled):hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ── Status indicator ── */
+  .status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  .status-pill.connected { border-color: var(--green); color: var(--green); }
+  .status-pill.flashing { border-color: var(--yellow); color: var(--yellow); }
+  .status-pill.error { border-color: var(--red); color: var(--red); }
+  .status-pill.done { border-color: var(--green); color: var(--green); }
+
+  .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  .dot.pulse {
+    animation: pulse 1s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* ── Progress bar ── */
+  .progress-wrap {
+    margin-top: 14px;
+    display: none;
+  }
+
+  .progress-wrap.visible { display: block; }
+
+  .progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .progress-track {
+    height: 6px;
+    background: var(--bg3);
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+
+  .progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--accent);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+  }
+
+  .progress-fill.done { background: var(--green); }
+  .progress-fill.error { background: var(--red); }
+
+  /* ── Console ── */
+  .console {
+    background: #080a0a;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.7;
+    min-height: 180px;
+    max-height: 320px;
+    overflow-y: auto;
+    color: #94a3b8;
+  }
+
+  .console-line { margin: 0; white-space: pre-wrap; word-break: break-all; }
+  .console-line.ok { color: var(--green); }
+  .console-line.warn { color: var(--yellow); }
+  .console-line.err { color: var(--red); }
+  .console-line.info { color: var(--accent); }
+  .console-line.dim { color: #475569; }
+
+  .console-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+  }
+
+  .clear-btn {
+    font-family: var(--mono);
+    font-size: 10px;
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 3px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .clear-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ── Instructions ── */
+  .instr-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .instr-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: #94a3b8;
+    line-height: 1.5;
+  }
+
+  .instr-list li .n {
+    color: var(--accent);
+    font-family: var(--mono);
+    font-size: 11px;
+    min-width: 18px;
+    padding-top: 2px;
+  }
+
+  .notice {
+    font-size: 12px;
+    color: var(--muted);
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    margin-top: 12px;
+    line-height: 1.6;
+  }
+
+  /* ── Footer ── */
+  footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  /* ── Browser warning ── */
+  #browser-warn {
+    display: none;
+    background: #1a0a08;
+    border: 1px solid var(--red);
+    border-radius: 8px;
+    padding: 14px 18px;
+    color: var(--red);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">μM</div>
+  <h1>The <span>MicroMaker</span> — Radio Flasher</h1>
+  <span class="header-badge">Web Serial · esptool-js</span>
+</header>
+
+<main>
+
+  <!-- Browser warning -->
+  <div id="browser-warn">
+    ⚠ Web Serial is not supported in this browser. Please use <strong>Chrome</strong> or <strong>Edge</strong> (desktop).
+  </div>
+
+  <!-- Step 1 – Pick firmware -->
+  <div class="card">
+    <div class="card-header">
+      <div class="step-num">1</div>
+      <h2>Select Firmware</h2>
+    </div>
+    <div class="card-body">
+      <div class="firmware-grid" id="fw-grid">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 2 – Options -->
+  <div class="card">
+    <div class="card-header">
+      <div class="step-num">2</div>
+      <h2>Flash Options</h2>
+    </div>
+    <div class="card-body" style="display:flex; flex-direction:column; gap:16px;">
+      <div class="options-row">
+        <label class="toggle-wrap">
+          <input type="checkbox" id="opt-erase" checked>
+          <div>
+            <div class="toggle-label">Erase Flash</div>
+            <div class="toggle-desc">Recommended — clears previous firmware</div>
+          </div>
+        </label>
+      </div>
+      <div class="baud-row">
+        <label for="baud-select">Baud Rate</label>
+        <select id="baud-select">
+          <option value="460800">460800</option>
+          <option value="921600" selected>921600</option>
+          <option value="115200">115200</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 3 – Connect & Flash -->
+  <div class="card">
+    <div class="card-header">
+      <div class="step-num">3</div>
+      <h2>Connect &amp; Flash</h2>
+      <div class="status-pill" id="status-pill">
+        <div class="dot"></div>
+        <span id="status-text">Disconnected</span>
+      </div>
+    </div>
+    <div class="card-body" style="display:flex; flex-direction:column; gap:16px;">
+      <div class="btn-row">
+        <button class="btn btn-primary" id="btn-connect">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          Connect Device
+        </button>
+        <button class="btn btn-primary" id="btn-flash" disabled>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Flash Firmware
+        </button>
+        <button class="btn btn-danger" id="btn-disconnect" disabled>Disconnect</button>
+      </div>
+
+      <div class="progress-wrap" id="progress-wrap">
+        <div class="progress-label">
+          <span id="prog-label">Writing...</span>
+          <span id="prog-pct">0%</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="prog-fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Console -->
+  <div class="card">
+    <div class="card-header">
+      <div class="step-num" style="background:var(--bg3); border:1px solid var(--border); color:var(--muted);">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+      </div>
+      <h2>Output</h2>
+      <div style="margin-left:auto;">
+        <button class="clear-btn" id="btn-clear">Clear</button>
+      </div>
+    </div>
+    <div class="card-body" style="padding-top:10px;">
+      <div class="console" id="console"></div>
+    </div>
+  </div>
+
+  <!-- Instructions -->
+  <div class="card">
+    <div class="card-header">
+      <div class="step-num" style="background:var(--bg3); border:1px solid var(--border); color:var(--muted);">?</div>
+      <h2>First-Time Setup</h2>
+    </div>
+    <div class="card-body">
+      <ul class="instr-list">
+<li><span class="n">01</span> After flashing, press <strong>RESET</strong> on the board if it doesn't reboot automatically.</li>
+<li><span class="n">02</span> The radio will create a WiFi access point called <strong>MyBT_Radio</strong> — connect to it.</li>
+<li><span class="n">03</span> Wait ~2 minutes for the flash to format on first boot. Restart the radio; the LCD will show the local IP.</li>
+<li><span class="n">04</span> Open that IP in your browser to access the Web UI and upload your station list.</li>
+<li><span class="n">05</span> Station list format: <code style="font-family:var(--mono); font-size:11px; color:var(--accent);">Station Name,http://stream.url</code> — one per line.</li>
+<li><span class="n">06</span> The Product ID can be found at the bottom of the webpage. Send that number to themicromaker@outlook.com.</li>
+<li><span class="n">07</span> You can purchase a license key by sending $22 to tmicromaker@gmail.com PayPal account or through Tindie Store (https://www.tindie.com/stores/6659291/)</li>
+<li><span class="n">08</span> Right after purchasing a license key, it will be sent to you via return email.</li>
+	 </ul>
+      <div class="notice">
+        If flashing fails, hold <strong>BOOT</strong>, press &amp; release <strong>RESET</strong>, then release <strong>BOOT</strong> to manually enter bootloader mode. Try a lower baud rate (460800) if you see write errors.
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <a href="https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers" target="_blank">GitHub Repo</a> ·
+  Powered by <a href="https://github.com/espressif/esptool-js" target="_blank">esptool-js</a> ·
+  <a href="https://www.tindie.com/stores/6659291/" target="_blank">The MicroMaker on Tindie</a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+
+<!-- esptool-js from CDN (ESM bundle) -->
+<script type="module">
+// Buffer polyfill — must be set before esptool-js imports
+import { Buffer } from 'https://esm.sh/buffer@6.0.3';
+globalThis.Buffer = Buffer;
+
+import { ESPLoader, Transport } from 'https://unpkg.com/esptool-js@0.5.7/bundle.js';
+
+// ── Firmware sources — JSONs in firmware repo control the changelog ──
+const FW_SOURCES = [
+  { jsonFile: 'My_Radio.json',          label: 'Radio with Touch Display or Rotary Encoder — S3', chip: 'ESP32-S3', flashSize: '16MB', binFile: 'My_Radio.bin'           },
+  { jsonFile: 'My_Radio_ESP32-P4.json', label: 'Radio Streamer — ESP32-P4 No Display (S/PDIF)',   chip: 'ESP32-P4', flashSize: '16MB', binFile: 'My_Radio_ESP32-P4.bin'  },
+  { jsonFile: 'MyBT_Radio_Streamer.json',label: 'Radio Bluetooth — S3 Streamer · No Display',     chip: 'ESP32-S3', flashSize: '8MB',  binFile: 'MyBT_Radio_Streamer.bin' },
+  { jsonFile: 'Mouse_Keep_Alive.json',  label: 'Mouse Keep-Alive',                                chip: 'ESP32-S3', flashSize: '4MB',  binFile: 'Mouse_Keep_Alive.bin'   },
+];
+const RAW_BASE = 'https://raw.githubusercontent.com/MicroMkr/firmware/main/';
+
+let FIRMWARES = [];
+
+// ── State ─────────────────────────────────────
+let selectedFw = null;
+let transport = null;
+let espLoader = null;
+let connected = false;
+let loadedBinary = null;
+
+// ── DOM refs ─────────────────────────────────
+const consoleEl = document.getElementById('console');
+const btnConnect = document.getElementById('btn-connect');
+const btnFlash = document.getElementById('btn-flash');
+const btnDisconnect = document.getElementById('btn-disconnect');
+const btnClear = document.getElementById('btn-clear');
+const statusPill = document.getElementById('status-pill');
+const statusText = document.getElementById('status-text');
+const progressWrap = document.getElementById('progress-wrap');
+const progFill = document.getElementById('prog-fill');
+const progPct = document.getElementById('prog-pct');
+const progLabel = document.getElementById('prog-label');
+const optErase = document.getElementById('opt-erase');
+const baudSelect = document.getElementById('baud-select');
+const fwGrid = document.getElementById('fw-grid');
+
+// ── Browser check ────────────────────────────
+if (!('serial' in navigator)) {
+  document.getElementById('browser-warn').style.display = 'block';
+  btnConnect.disabled = true;
+}
+
+// ── Build firmware cards ──────────────────────
+function buildFirmwareCards() {
+  fwGrid.innerHTML = '';
+  FIRMWARES.forEach((fw, i) => {
+    const card = document.createElement('div');
+    card.className = 'fw-card' + (i === 0 ? ' selected' : '');
+    card.innerHTML = `
+      <div class="fw-version">${fw.label}</div>
+      <div class="fw-chip">${fw.chip} · ${fw.flashSize}</div>
+      <div class="fw-changelog">${fw.changelog || '—'}</div>
+    `;
+    card.addEventListener('click', () => {
+      document.querySelectorAll('.fw-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      selectedFw = fw;
+      loadedBinary = null;
+      log(`Selected: ${fw.label} (${fw.chip}) — ${fw.filename}`, 'info');
+    });
+    fwGrid.appendChild(card);
+  });
+  selectedFw = FIRMWARES[0];
+}
+
+// ── Load firmware info from JSONs ────────────
+async function loadFirmwares() {
+  fwGrid.innerHTML = `<div style="color:var(--muted);font-size:13px;font-family:var(--mono);padding:4px 0;">Fetching latest versions...</div>`;
+  log('Fetching firmware info...', 'info');
+  const results = await Promise.allSettled(
+    FW_SOURCES.map(src =>
+      fetch(RAW_BASE + src.jsonFile).then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json().then(data => ({
+          label: src.label,
+          chip: src.chip,
+          flashSize: src.flashSize,
+          filename: src.binFile,
+          changelog: data.changelog || '',
+        }));
+      })
+    )
+  );
+  FIRMWARES = [];
+  results.forEach((res, i) => {
+    if (res.status === 'fulfilled') {
+      FIRMWARES.push(res.value);
+      log(`✓ ${res.value.label}`, 'ok');
+    } else {
+      log(`✗ Failed to load ${FW_SOURCES[i].label}: ${res.reason.message}`, 'err');
+    }
+  });
+  if (FIRMWARES.length === 0) {
+    fwGrid.innerHTML = `<div style="color:var(--red);font-size:13px;padding:4px 0;">Failed to load firmware info. Check your connection.</div>`;
+    return;
+  }
+  buildFirmwareCards();
+  log(`${FIRMWARES.length} firmware(s) ready. Connect your device and flash.`, 'dim');
+}
+
+loadFirmwares();
+
+// ── Console helpers ───────────────────────────
+function log(msg, type = '') {
+  const p = document.createElement('p');
+  p.className = 'console-line' + (type ? ' ' + type : '');
+  const ts = new Date().toLocaleTimeString('en-GB', { hour12: false });
+  p.textContent = `[${ts}] ${msg}`;
+  consoleEl.appendChild(p);
+  consoleEl.scrollTop = consoleEl.scrollHeight;
+}
+
+function setStatus(state, label) {
+  statusPill.className = 'status-pill ' + state;
+  statusText.textContent = label;
+  const dot = statusPill.querySelector('.dot');
+  dot.className = 'dot' + (state === 'flashing' ? ' pulse' : '');
+}
+
+function setProgress(pct, done = false, err = false) {
+  progressWrap.classList.add('visible');
+  progFill.style.width = pct + '%';
+  progPct.textContent = Math.round(pct) + '%';
+  if (done) progFill.className = 'progress-fill done';
+  else if (err) progFill.className = 'progress-fill error';
+  else progFill.className = 'progress-fill';
+}
+
+
+
+btnClear.addEventListener('click', () => { consoleEl.innerHTML = ''; });
+
+// ── espLoaderTerminal (required by ESPLoader) ─
+const terminal = {
+  clean() { },
+  writeLine(data) { log(data, 'dim'); },
+  write(data) {
+    if (data.trim()) log(data.trim(), 'dim');
+  }
+};
+
+// ── Connect ───────────────────────────────────
+btnConnect.addEventListener('click', async () => {
+  try {
+    log('Requesting serial port...', 'info');
+    const port = await navigator.serial.requestPort();
+    transport = new Transport(port, true);
+
+    const baud = parseInt(baudSelect.value);
+    log(`Connecting at ${baud} baud...`);
+
+    espLoader = new ESPLoader({
+      transport,
+      baudrate: baud,
+      terminal,
+      romBaudrate: 115200,
+      enableTracing: false
+    });
+
+    const chip = await espLoader.main();
+    log(`Connected — Chip: ${chip}`, 'ok');
+
+    connected = true;
+    setStatus('connected', 'Connected · ' + chip);
+    btnConnect.disabled = true;
+    btnFlash.disabled = false;
+    btnDisconnect.disabled = false;
+
+  } catch (e) {
+    log('Connection failed: ' + e.message, 'err');
+    setStatus('error', 'Error');
+    if (transport) { try { await transport.disconnect(); } catch(_) {} }
+    transport = null; espLoader = null; connected = false;
+  }
+});
+
+// ── Disconnect ────────────────────────────────
+btnDisconnect.addEventListener('click', async () => {
+  if (transport) {
+    try { await transport.disconnect(); } catch(_) {}
+    transport = null; espLoader = null; connected = false;
+  }
+  setStatus('', 'Disconnected');
+  btnConnect.disabled = false;
+  btnFlash.disabled = true;
+  btnDisconnect.disabled = true;
+  progressWrap.classList.remove('visible');
+  log('Disconnected.', 'warn');
+});
+
+// ── Flash ─────────────────────────────────────
+btnFlash.addEventListener('click', async () => {
+  if (!connected || !espLoader) { log('Not connected.', 'err'); return; }
+
+  btnFlash.disabled = true;
+  btnDisconnect.disabled = true;
+  setStatus('flashing', 'Flashing…');
+  setProgress(0);
+
+  try {
+    if (!loadedBinary) {
+    const binUrl = RAW_BASE + selectedFw.filename;
+
+    log(`Downloading ${selectedFw.label}...`, 'info');
+    log(`Source: ${binUrl}`, 'dim');
+    progLabel.textContent = 'Downloading…';
+    setProgress(2);
+
+    const resp = await fetch(binUrl, { signal: AbortSignal.timeout(60000) });
+    if (!resp.ok) throw new Error(`HTTP ${resp.status} — file not found`);
+    const buf = await resp.arrayBuffer();
+    if (buf.byteLength < 1024) throw new Error(`Response too small (${buf.byteLength} bytes)`);
+    const bytes = new Uint8Array(buf);
+    loadedBinary = Array.from(bytes).map(b => String.fromCharCode(b)).join('');
+    log(`Downloaded ${(buf.byteLength / 1024).toFixed(1)} KB ✓`, 'ok');
+    }
+    const binary = loadedBinary;
+    log(`Flashing ${selectedFw.label} — ${(binary.length/1024).toFixed(1)} KB`, 'info');
+    setProgress(10);
+
+    // Erase if requested
+    if (optErase.checked) {
+      log('Erasing flash — this may take ~10 seconds...', 'warn');
+      progLabel.textContent = 'Erasing flash…';
+      setProgress(10);
+      await espLoader.eraseFlash();
+      log('Erase complete.', 'ok');
+      setProgress(20);
+    }
+
+    // Flash
+    log('Writing firmware to 0x00000000...', 'info');
+    progLabel.textContent = 'Writing firmware…';
+
+    await espLoader.writeFlash({
+      fileArray: [{ data: binary, address: 0x00000000 }],
+      flashSize: selectedFw.flashSize || 'keep',
+      flashMode: 'keep',
+      flashFreq: 'keep',
+      eraseAll: false,
+      compress: true,
+      reportProgress(fileIndex, written, total) {
+        const pct = 25 + ((written / total) * 70);
+        setProgress(pct);
+        progLabel.textContent = `Writing… ${(written / 1024).toFixed(0)} / ${(total / 1024).toFixed(0)} KB`;
+      },
+      calculateMD5Hash(image) {
+        return CryptoJS.MD5(CryptoJS.enc.Latin1.parse(image)).toString();
+      }
+    });
+
+    setProgress(100, true);
+    progLabel.textContent = 'Done!';
+    log('✓ Flash complete! Hard resetting via RTS...', 'ok');
+
+    try {
+      if (typeof espLoader.hardReset === 'function') await espLoader.hardReset();
+      else if (typeof espLoader.after_flash === 'function') await espLoader.after_flash();
+      else await transport.setDTR(false);
+    } catch(_) {}
+    log('Device rebooted. Press RESET if it does not start automatically.', 'ok');
+    log('On first boot: wait ~5 min for Flash format, then connect to MyBT_Radio WiFi.', 'info');
+
+    setStatus('done', 'Done ✓');
+    btnDisconnect.disabled = false;
+
+  } catch (e) {
+    log('Flash error: ' + e.message, 'err');
+    setProgress(progFill.style.width.replace('%', ''), false, true);
+    progLabel.textContent = 'Error';
+    setStatus('error', 'Flash Failed');
+    btnFlash.disabled = false;
+    btnDisconnect.disabled = false;
+  }
+});
+
+// ── Init log ──────────────────────────────────
+log('MicroMaker ESP32 Flasher ready.', 'info');
+log('Select firmware → download .bin → load it → connect → flash.', 'dim');
+</script>
+</body>
+</html>
