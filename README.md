@@ -175,7 +175,7 @@ Optional Pam8406 amplifier 2x6w amp+ pcm5102a Stereo DAC on one PCB which can be
 
 
 
-There is also a bluetooth version (without a speaker):
+There is also a bluetooth streamer version (without a speaker):
 ![IMG_4067](https://github.com/user-attachments/assets/a20ece25-72aa-4b3f-93ca-11b82eedc690)
 
 ![IMG_E4071](https://github.com/user-attachments/assets/1cafccae-8f19-4aa5-95db-807c45a0d5f8)
