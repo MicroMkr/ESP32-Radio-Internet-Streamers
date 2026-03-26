@@ -1,5 +1,5 @@
 {
   "version": "V46",
   "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V46/radio_firmware_V46.bin",
-  "changelog": "Minor GUI Improvments "
+  "changelog": "Press the BT button to switch to Bluetooth mode"
 }
