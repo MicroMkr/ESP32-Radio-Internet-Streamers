@@ -1,5 +1,5 @@
 {
   "version": "V47",
   "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V47/radio_firmware_V47.bin",
-  "changelog": "Press the BT Icon to switch to Bluetooth mode"
+  "changelog": "On the Display, press the BT Icon to switch to Bluetooth mode"
 }
