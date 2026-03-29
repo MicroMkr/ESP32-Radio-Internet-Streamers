@@ -1,4 +1,3 @@
-
 Internet Radio Based on ESP32-P4 with SPDIF out and WebUi Management Interface
 
 ![IMG_4602](https://github.com/user-attachments/assets/404d861e-c2d5-45e2-b299-c588e6edba75)
@@ -36,89 +35,14 @@ There is also a Bluetooth version without ann internal speaker:
 
 **Installation:**
 
-Flashing ESP Firmware Using the Espressif Web Flash Tool
+Go to:  https://micromkr.github.io/firmware/MicroMaker-Flasher.html
 
-This guide explains how to flash firmware to an ESP device using Espressif’s browser-based flashing tool.
+Connect your microcontroller to the USB port of your computer.
 
-Requirements
+Choose the right firmware
 
-A computer with Google Chrome or Microsoft Edge
+Press connect and flash.
 
-A USB cable connected to your ESP board
-
-The compiled firmware file (.bin)
-
-Open the Web Flash Tool
-Open the following page in your browser:
-
-https://espressif.github.io/esptool-js/
-
-This tool runs directly in the browser and does not require installing any software.
-
-Connect the ESP Device
-Connect your ESP board to the computer using a USB cable.
-
-Click the Connect button on the web page.
-
-A window will appear showing available serial ports.
-
-Select the COM port corresponding to your ESP device (USB JTAG/serial debug unit (COM xx) - Paired
-
-Click Connect.
-
-Set the Flash Address and Firmware File
-In the Flash Address field, enter:
-
-0x0
-
-Click Choose File.
-
-Select your firmware .bin file.
-
-Example configuration:
-
-Address File 0x0 firmware.bin
-
-Optional Settings (Recommended)
-Before flashing, enable:
-
-Erase Flash – This clears any previous firmware and prevents compatibility issues.
-
-Leave other settings at their default values unless specific changes are required.
-
-Typical defaults:
-
-Flash Mode: Keep
-
-Flash Size: Keep
-
-Baud Rate: 460800 or 921600
-
-Enter Bootloader Mode (Only If Required)
-Many ESP boards enter flashing mode automatically.
-
-If flashing fails, manually enter bootloader mode:
-
-Hold the BOOT button.
-
-Press and release the RESET button.
-
-Release the BOOT button.
-
-The board is now ready for flashing.
-
-Flash the Firmware
-Click Program.
-
-The flashing process will begin.
-
-Example console output:
-
-Erasing flash... Writing at 0x00000000... Hash verified. Hard resetting via RTS pin...
-
-Wait until the process completes.
-
-Finish
 After flashing is finished:
 
 Press the RESET button on the ESP board (if it does not reboot automatically).
