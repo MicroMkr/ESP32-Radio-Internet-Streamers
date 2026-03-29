@@ -41,7 +41,7 @@ Connect your microcontroller to the USB port of your computer.
 
 Choose the right firmware
 
-Press connect and flash.
+Press connect choose the right port and flash.
 
 After flashing is finished:
 
