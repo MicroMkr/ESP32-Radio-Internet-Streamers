@@ -1,5 +1,5 @@
 {
   "version": "V49EB",
   "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V49EB/radio_firmware_V49EB.bin",
-  "changelog": "Mode switching via the Bluetooth button has been updated from a single tap to a double tap"
+  "changelog": "Mode switching on the LCD display now uses a double tap on the Bluetooth button instead of a single tap"
 }
