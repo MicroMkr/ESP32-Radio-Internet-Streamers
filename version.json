@@ -1,5 +1,5 @@
 {
-  "version": "V48",
-  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V48/radio_firmware_V48.bin",
-  "changelog": "On the Display, press the BT Icon to switch to Bluetooth mode"
+  "version": "V49",
+  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V49/radio_firmware_V49.bin",
+  "changelog": "Bluetooth button on the display changes mode using double tap"
 }
