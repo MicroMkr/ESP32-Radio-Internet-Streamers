@@ -1,5 +1,5 @@
 {
-  "version": "V40",
-  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V40/radio_firmware_V40.bin",
+  "version": "V56",
+  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V56/radio_firmware_V56.bin",
   "changelog": "Bluetooth button on the display changes mode using double tap"
 }
