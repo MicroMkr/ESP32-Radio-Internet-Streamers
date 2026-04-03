@@ -1,5 +1,5 @@
 {
-  "version": "V40EB",
-  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V40EB/radio_firmware_V40EB.bin",
+  "version": "V56EB",
+  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V56EB/radio_firmware_V56EB.bin",
   "changelog": "Mode switching on the LCD display now uses a double tap on the Bluetooth button instead of a single tap"
 }
