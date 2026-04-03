@@ -1,6 +1,6 @@
 {
-  "version": "V58EB",
-  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V58EB/radio_firmware_V58EB.bin",
+  "version": "V59EB",
+  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V59EB/radio_firmware_V59EB.bin",
   "changelog": "This version introduces many new improvements and changes." 
   "changelog":"If you encounter any bugs, please report them to: tmicromaker@gmail.com"
 }
