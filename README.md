@@ -50,9 +50,9 @@ Press the RESET button on the ESP board (if it does not reboot automatically).
 The new firmware will start running.
 
 After ESP32 boot wait for few min until network scanning is completed.
-Open the wifi in your phone and search for AH_Radio
+Open the wifi in your phone and search for BT_Radio
 Connect to your network
-Wait for 5 minutes for the LittleFS format to be completed
+Wait for 5 minutes for the files system format to be completed
 (You might need to turn off/on the radio) Look at the LCD for the IP address
 connect to that IP address using your computer browser
 Upload a single station or list of stations using the following format
@@ -61,18 +61,15 @@ Station Name 1,Station Address 1
 
 Station Name 2,Station Address 2
 
-Radio Ariel,http://123.456.789.0/stream
+Radio Space,http://123.456.789.0/stream
 
 Radio Hits,http://stream.awesomehitsradio.com
 .
-You can find station URL's here: https://streamurl.link/
-
-Note: 1. The boot_app0.bin file is included with the Lilygo flash tool in the bin directory.
-      2. An I2S DAC is required for this project, Amplifier is optional.  Consult the I2S data sheet to learn how to activate the (L+R)/2 or stereo signal.  
+Note: An I2S DAC is required for this project, Amplifier is optional.  Consult the I2S data sheet to learn how to activate the (L+R)/2 or stereo signal.  
 
 Note: for some stations that don't play and their URL starts with https:// try to change it to http:// and check if it is working
 
-.Connection diagram using the Max98357a chip (if you use a header you don't need to connect wires as the pins are arranged correctly). 
+Connection diagram using the Max98357a chip (if you use a header you don't need to connect wires as the pins are arranged correctly). 
 I strongly recommend using the PCM5102a for better sound quality.      
  
 Connect the I2S DAC to the following pins: 
