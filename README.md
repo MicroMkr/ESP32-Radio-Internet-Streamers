@@ -35,7 +35,7 @@ There is also a Bluetooth version without ann internal speaker:
 
 **Installation:**
 
-Go to:  https://micromkr.github.io/firmware/MicroMaker-Flasher.html
+In your web prowser open:  https://micromkr.github.io/firmware/MicroMaker-Flasher.html
 
 <img width="637" height="910" alt="image" src="https://github.com/user-attachments/assets/e07d45e6-6b3a-440c-8eab-9815db43fa2c" />
 
