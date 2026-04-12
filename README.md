@@ -37,6 +37,9 @@ There is also a Bluetooth version without ann internal speaker:
 
 Go to:  https://micromkr.github.io/firmware/MicroMaker-Flasher.html
 
+<img width="637" height="910" alt="image" src="https://github.com/user-attachments/assets/e07d45e6-6b3a-440c-8eab-9815db43fa2c" />
+
+
 Connect your microcontroller to the USB port of your computer.
 
 Choose the right firmware
