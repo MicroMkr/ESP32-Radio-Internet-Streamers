@@ -1,7 +1,7 @@
 Internet Radio Based on ESP32-P4 with SPDIF out and WebUi Management Interface
 
-Important Note: Currently only kits and ready-assembled radio versions are available.
-For more information, contact [themicromaker@outlook.com](mailto:themicromaker@outlook.com)
+**Important Note: Currently only kits and ready-assembled radio versions are available.
+For more information, contact [themicromaker@outlook.com](mailto:themicromaker@outlook.com)**
 
 
 ![IMG_4602](https://github.com/user-attachments/assets/404d861e-c2d5-45e2-b299-c588e6edba75)
