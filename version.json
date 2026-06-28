@@ -1,5 +1,5 @@
 {
-  "version": "V1.2.8",
-  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V1.2.8/radio_firmware_V1.2.8.enc",
+  "version": "V1.2.9",
+  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V1.2.9/radio_firmware_V1.2.9.enc",
   "changelog": "This version introduces new improvements and changes (Last Stable V1.1.8). If you encounter any bugs, please report them to: tmicromaker@gmail.com"
 }
