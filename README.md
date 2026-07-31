@@ -2,7 +2,7 @@
 **Important Note: Currently only kits and ready-assembled radio versions are available.
 For more information, contact [themicromaker@outlook.com](mailto:themicromaker@outlook.com)**
 
-You can purchae the radio in my website: https://tmicromaker.com/ 
+You can purchae all the radio versions in my website: https://tmicromaker.com/ 
 
 Internet Radio Based on ESP32-P4 with SPDIF out and WebUi Management Interface
 
