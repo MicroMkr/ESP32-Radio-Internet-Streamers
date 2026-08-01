@@ -16,6 +16,7 @@ This is a fully functional Internet Radio Based on ESP32-S3
 
 ![IMG_E4360_1](https://github.com/user-attachments/assets/581920a4-6eb2-4d3d-9823-32bb25084181)
 
+![IMG_4870](https://github.com/user-attachments/assets/27eed72e-b462-4414-9c2e-7d4f0acef384)
 
 A repository where you can find documantation, various firmware version and enclosures 3D files, : 
 https://tinyurl.com/4yduvmdj
