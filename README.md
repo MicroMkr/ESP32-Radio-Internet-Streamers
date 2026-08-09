@@ -1,7 +1,5 @@
 
-**Important Note: Currently only kits and ready-assembled radio versions are available.
-For more information visit  my website: https://tmicromaker.com/**
-
+**Firmware, fully assembled units, and kits are available on my website:** [tmicromaker.com](https://tmicromaker.com/?utm_source=chatgpt.com)
 
 Internet Radio Based on ESP32-P4 with SPDIF out and WebUi Management Interface
 
