@@ -21,7 +21,7 @@ https://tinyurl.com/4yduvmdj
 
 <img width="228" height="228" alt="image" src="https://github.com/user-attachments/assets/e6c9b7a2-3e71-4442-8183-ced2320a94c2" />
 
-For any quations Email me to: themicromaker@outlook.com
+For any quations Email me to: tmicromaker@gmail.com
 
 
 Important Note: To enable the sound it is required to purchase a license key
