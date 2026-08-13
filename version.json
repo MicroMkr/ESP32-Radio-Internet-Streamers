@@ -1,5 +1,5 @@
 {
-  "version": "V1.4.2",
-  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V1.4.2/radio_firmware_V1.4.2.enc",
+  "version": "V1.4.3",
+  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V1.4.3/radio_firmware_V1.4.3.enc",
   "changelog": "Added in this version - Auto new firmware notification"
 }
