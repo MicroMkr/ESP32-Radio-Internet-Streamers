@@ -1,5 +1,5 @@
 
-**Firmware, fully assembled units, and kits are available on my website:** [https://tmicromaker.com/](https://tmicromaker.com/)
+**Firmware and fully assembled units are available on my website:** [https://tmicromaker.com/](https://tmicromaker.com/)
 
 Internet Radio Based on ESP32-P4 with SPDIF out and WebUi Management Interface
 
