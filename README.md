@@ -1,10 +1,6 @@
 
 **Firmware and fully assembled units are available on my website:** [https://tmicromaker.com/](https://tmicromaker.com/)
 
-Internet Radio Based on ESP32-P4 with SPDIF out and WebUi Management Interface
-
-![IMG_4602](https://github.com/user-attachments/assets/404d861e-c2d5-45e2-b299-c588e6edba75)
-
 
 This is a fully functional Internet Radio Based on ESP32-S3
 
@@ -15,6 +11,10 @@ This is a fully functional Internet Radio Based on ESP32-S3
 ![IMG_E4360_1](https://github.com/user-attachments/assets/581920a4-6eb2-4d3d-9823-32bb25084181)
 
 ![IMG_4870](https://github.com/user-attachments/assets/27eed72e-b462-4414-9c2e-7d4f0acef384)
+
+Internet Radio Based on ESP32-P4 with SPDIF out and WebUi Management Interface
+
+![IMG_4602](https://github.com/user-attachments/assets/404d861e-c2d5-45e2-b299-c588e6edba75)
 
 A repository where you can find documantation, various firmware version and enclosures 3D files, : 
 https://tinyurl.com/4yduvmdj
