@@ -1,5 +1,3 @@
-**ESP32-S3 Internet Radio with WiFi streaming, touchscreen control, web-based station management**
-
 
 **Firmware and fully assembled units are available on my website:** [https://tmicromaker.com/](https://tmicromaker.com/)
 
