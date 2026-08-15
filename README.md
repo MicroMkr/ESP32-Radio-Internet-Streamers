@@ -1,4 +1,4 @@
-**ESP32-S3 Internet Radio with WiFi streaming, touchscreen control, web-based station management, I2S audio and support for MP3, AAC, and Vorbis**
+**ESP32-S3 Internet Radio with WiFi streaming, touchscreen control, web-based station management**
 
 
 **Firmware and fully assembled units are available on my website:** [https://tmicromaker.com/](https://tmicromaker.com/)
