@@ -1,5 +1,5 @@
 
-**Firmware and fully assembled units are available on my website:** [https://tmicromaker.com/](https://tmicromaker.com/)
+**Firmware, DIY kits and fully assembled units are available on my website:** [https://tmicromaker.com/](https://tmicromaker.com/)
 
 
 This is a fully functional Internet Radio Based on ESP32-S3
