@@ -1,6 +1,5 @@
 {
   "version": "V1.4.7",
   "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V1.4.7/radio_firmware_V1.4.7.enc",
-  "changelog": "Style Changes: Classic — slow: tap=1, hold=scroll; fast: immediate. Middle-tap to play.
-Modern — tap=1, hold=scroll; release plays. Hybrid — slow: tap=1/hold=scroll, release plays; fast: immediate, middle-tap to play."
+  "changelog": "Style Changes: Classic — slow: tap=1, hold=scroll; fast: immediate. Middle-tap to play. Modern — tap=1, hold=scroll; release plays. Hybrid — slow: tap=1/hold=scroll, release plays; fast: immediate, middle-tap to play."
 }
