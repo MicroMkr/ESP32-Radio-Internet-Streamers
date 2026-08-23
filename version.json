@@ -1,5 +1,5 @@
 {
-  "version": "V1.4.7",
-  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V1.4.7/radio_firmware_V1.4.7.enc",
+  "version": "V1.4.8",
+  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V1.4.8/radio_firmware_V1.4.8.enc",
   "changelog": "Fixing sleep mode power drain, resulting in extended battery life"
 }
