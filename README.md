@@ -31,7 +31,7 @@ Note: The Radio was designed to work only with ESP32S3 Lilygo t-displayS3 Touch 
 
 You can watch the Radio various versions and evolution here:
 
-https://www.youtube.com/@tmicromaker
+**https://www.youtube.com/@tmicromaker**
 
 There is also a Bluetooth version without ann internal speaker:
 
