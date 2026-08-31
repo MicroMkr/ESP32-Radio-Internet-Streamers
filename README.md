@@ -8,7 +8,8 @@ This is a fully functional Internet Radio Based on ESP32-S3
 
 ![IMG_3576](https://github.com/user-attachments/assets/ca0a1ff1-3cd8-4685-a9a8-28e3d01f89e3)
 
-![IMG_E4360_1](https://github.com/user-attachments/assets/581920a4-6eb2-4d3d-9823-32bb25084181)
+<img width="4032" height="2268" alt="IMG_4994" src="https://github.com/user-attachments/assets/b02f5701-7adf-4c5c-8062-8f69f8b3f6c6" />
+
 
 ![IMG_4870](https://github.com/user-attachments/assets/27eed72e-b462-4414-9c2e-7d4f0acef384)
 
