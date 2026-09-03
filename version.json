@@ -1,5 +1,5 @@
 {
-  "version": "V1.5.2",
-  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V1.5.2/radio_firmware_V1.5.2.enc",
-  "changelog": "Adding Alarm Clock, improvig user Interface, fixing display flickering"
+  "version": "V1.5.3",
+  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V1.5.3/radio_firmware_V1.5.3.enc",
+  "changelog": "Fix for webui shutdown button not responding"
 }
