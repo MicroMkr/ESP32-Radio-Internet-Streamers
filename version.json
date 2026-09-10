@@ -1,5 +1,5 @@
 {
   "version": "V1.5.6",
   "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V1.5.6/radio_firmware_V1.5.6.enc",
-  "changelog": "Adding webui favorite station search engine"
+  "changelog": "adding a station-search engine to the WebUI Favorites section"
 }
