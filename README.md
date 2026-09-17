@@ -50,7 +50,7 @@ In your web prowser open:  https://tmicromaker.com/MicroMaker_WebFlasher.html
 3. Press connect choose the right port and flash.
 
 
-**Operation**
+**Operation:**
 
 After flashing is finished:
 
