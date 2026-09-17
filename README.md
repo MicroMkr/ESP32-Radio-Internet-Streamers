@@ -41,26 +41,28 @@ In your web prowser open:  https://tmicromaker.com/MicroMaker_WebFlasher.html
 
 <img width="642" height="1010" alt="firmware" src="https://github.com/user-attachments/assets/515fc0c8-b4f9-4527-b8c0-5d6a3a94a92c" />
 
+Put the microcontroller in boot mode
 
 Connect your microcontroller to the USB port of your computer.
-
-Choose the right firmware
 
 Press connect choose the right port and flash.
 
 After flashing is finished:
 
-Press the RESET button on the ESP board (if it does not reboot automatically).
-
+1. Press the RESET button on the ESP board (if it does not reboot automatically).
 The new firmware will start running.
 
-After ESP32 boot wait for few min until network scanning is completed.
-Open the wifi in your phone and search for BT_Radio
-Connect to your network
-Wait for 5 minutes for the files system format to be completed
-(You might need to turn off/on the radio) Look at the LCD for the IP address
-connect to that IP address using your computer browser
-Upload a single station or list of stations using the following format
+3. After ESP32 boot wait for arround 1 min until network scanning is completed.
+
+4. Open the wifi in your phone or computer and search for BT_Radio
+
+5. Connect to your network
+
+6. Have a look at the LCD for the IP address
+
+7. Connect to that IP address using your computer browser
+
+8. Upload a single station or list of stations using the following format
 
 Station Name 1,Station Address 1
 
