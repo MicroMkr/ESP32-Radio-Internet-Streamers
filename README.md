@@ -42,7 +42,7 @@ You can watch the Radio various versions and evolution here:
 
 
 
-**Installation:**
+**Firmware Installation:**
 
 
 In your web prowser open:  https://tmicromaker.com/MicroMaker_WebFlasher.html
@@ -56,7 +56,7 @@ In your web prowser open:  https://tmicromaker.com/MicroMaker_WebFlasher.html
 3. Press connect choose the right port and flash.
 
 
-**Operation:**
+**Radio Operation:**
 
 After flashing is finished:
 
