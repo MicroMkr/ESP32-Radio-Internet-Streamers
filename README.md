@@ -4,9 +4,13 @@
 **Firmware, DIY kits, and fully assembled units are available at:** [https://tmicromaker.com/](https://tmicromaker.com/)
 
 
-This is a fully functional Internet Radio Based on ESP32-S3
+This is a fully functional Internet Radio Based on ESP32-S3 
+
+Version with Rotary Encoder:
 
 ![IMG_4870](https://github.com/user-attachments/assets/27eed72e-b462-4414-9c2e-7d4f0acef384)
+
+Version with touch screen:
 
 ![IMG_3577](https://github.com/user-attachments/assets/19e128bc-b9b6-4e2b-bd15-aea5ab638663)
 
