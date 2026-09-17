@@ -1,4 +1,3 @@
-<img width="4032" height="2268" alt="IMG_5058" src="https://github.com/user-attachments/assets/3fd80195-b492-4533-9153-18b9a9b27f07" />
 
 **Interested in building your own?**
 
