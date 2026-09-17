@@ -1,3 +1,4 @@
+<img width="4032" height="2268" alt="IMG_5058" src="https://github.com/user-attachments/assets/3fd80195-b492-4533-9153-18b9a9b27f07" />
 
 **Interested in building your own?**
 
@@ -11,6 +12,9 @@ Version with Rotary Encoder or Touch Screen:
 ![IMG_4870](https://github.com/user-attachments/assets/27eed72e-b462-4414-9c2e-7d4f0acef384)
 
 Version with touch screen:
+
+<img width="4032" height="2268" alt="IMG_5058" src="https://github.com/user-attachments/assets/e66cb312-404b-45b1-9e0c-250ae0f83afa" />
+
 
 ![IMG_3577](https://github.com/user-attachments/assets/19e128bc-b9b6-4e2b-bd15-aea5ab638663)
 
