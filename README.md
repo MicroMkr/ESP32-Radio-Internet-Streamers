@@ -14,9 +14,10 @@ Version with touch screen:
 
 ![IMG_3577](https://github.com/user-attachments/assets/19e128bc-b9b6-4e2b-bd15-aea5ab638663)
 
-Version with only Rotary Encoder (no option for touch screen):
 
 ![IMG_3576](https://github.com/user-attachments/assets/ca0a1ff1-3cd8-4685-a9a8-28e3d01f89e3)
+
+Version with only Rotary Encoder (no option for touch screen):
 
 <img width="4032" height="2268" alt="IMG_4994" src="https://github.com/user-attachments/assets/b02f5701-7adf-4c5c-8062-8f69f8b3f6c6" />
 
