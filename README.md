@@ -37,9 +37,7 @@ You can watch the Radio various versions and evolution here:
 
 **Installation:**
 
-In your web prowser open:  [https://micromkr.github.io/firmware/MicroMaker-Flasher.html](https://tmicromaker.com/MicroMaker_WebFlasher.html)
-
-<img width="637" height="910" alt="image" src="https://github.com/user-attachments/assets/e07d45e6-6b3a-440c-8eab-9815db43fa2c" />
+In your web prowser open:  [[https://micromkr.github.io/firmware/MicroMaker-Flasher.html](https://tmicromaker.com/MicroMaker_WebFlasher.html)](https://tmicromaker.com/MicroMaker_WebFlasher.html)
 
 
 Connect your microcontroller to the USB port of your computer.
