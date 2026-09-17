@@ -29,7 +29,6 @@ Internet Radio Based on ESP32-P4 with SPDIF out and WebUi Management Interface
 A repository where you can find documantation, various firmware version and enclosures 3D files, : 
 https://tinyurl.com/4yduvmdj
 
-<img width="228" height="228" alt="image" src="https://github.com/user-attachments/assets/e6c9b7a2-3e71-4442-8183-ced2320a94c2" />
 
 For any quations Email me to: tmicromaker@gmail.com
 
