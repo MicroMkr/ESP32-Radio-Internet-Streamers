@@ -39,6 +39,8 @@ You can watch the Radio various versions and evolution here:
 
 In your web prowser open:  https://tmicromaker.com/MicroMaker_WebFlasher.html
 
+<img width="642" height="1010" alt="firmware" src="https://github.com/user-attachments/assets/515fc0c8-b4f9-4527-b8c0-5d6a3a94a92c" />
+
 
 Connect your microcontroller to the USB port of your computer.
 
