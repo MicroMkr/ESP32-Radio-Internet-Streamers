@@ -89,7 +89,7 @@ Note: An I2S DAC is required for this project, Amplifier is optional.  Consult t
 Note: for some stations that don't play and their URL starts with https:// try to change it to http:// and check if it is working
 
 
-** DIY Instructions:**
+**DIY Instructions:**
 
 Connection diagram using the Max98357a chip (if you use a header you don't need to connect wires as the pins are arranged correctly). 
 I strongly recommend using the PCM5102a for better sound quality.      
