@@ -56,6 +56,7 @@ In your web prowser open:  https://tmicromaker.com/MicroMaker_WebFlasher.html
 3. Press connect choose the right port and flash.
 
 
+
 **Radio Operation:**
 
 After flashing is finished:
@@ -86,6 +87,9 @@ Radio Hits,http://stream.awesomehitsradio.com
 Note: An I2S DAC is required for this project, Amplifier is optional.  Consult the I2S data sheet to learn how to activate the (L+R)/2 or stereo signal.  
 
 Note: for some stations that don't play and their URL starts with https:// try to change it to http:// and check if it is working
+
+
+** DIY Instructions:**
 
 Connection diagram using the Max98357a chip (if you use a header you don't need to connect wires as the pins are arranged correctly). 
 I strongly recommend using the PCM5102a for better sound quality.      
