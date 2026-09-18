@@ -117,12 +117,6 @@ Just solder it like that and connect it to the speaker (the pins are already ali
 ![image](https://github.com/Arielhh/ESP32-Radio-Internet/assets/4849568/d6fd0191-0bdb-4603-8089-db5a063e00e1)
 
 
-There is also a bluetooth streamer version (without a speaker):
-![IMG_4067](https://github.com/user-attachments/assets/a20ece25-72aa-4b3f-93ca-11b82eedc690)
-
-![IMG_E4071](https://github.com/user-attachments/assets/1cafccae-8f19-4aa5-95db-807c45a0d5f8)
-
-
 <img width="1536" height="1024" alt="ChatGPT Image Sep 4, 2026, 03_16_44 PM" src="https://github.com/user-attachments/assets/62a63f19-e903-45d7-88f0-5eef8f5e518b" />
 
 
