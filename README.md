@@ -116,7 +116,7 @@ Just solder it like that and connect it to the speaker (the pins are already ali
 ![image](https://github.com/Arielhh/ESP32-Radio-Internet/assets/4849568/d405b0ce-b7a1-45ff-980c-08a1a25e7c60)
 ![image](https://github.com/Arielhh/ESP32-Radio-Internet/assets/4849568/d6fd0191-0bdb-4603-8089-db5a063e00e1)
 
-
+Module designed by the MicroMaker which combines DAC + AMP + Bluetooth in one module and is being controlled directlly by the microcontroller 
 <img width="1536" height="1024" alt="ChatGPT Image Sep 4, 2026, 03_16_44 PM" src="https://github.com/user-attachments/assets/62a63f19-e903-45d7-88f0-5eef8f5e518b" />
 
 
