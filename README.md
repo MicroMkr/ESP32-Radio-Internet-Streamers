@@ -57,6 +57,11 @@ In your web prowser open:  https://tmicromaker.com/MicroMaker_WebFlasher.html
 <img width="642" height="1010" alt="firmware" src="https://github.com/user-attachments/assets/515fc0c8-b4f9-4527-b8c0-5d6a3a94a92c" />
 
 1. Put the microcontroller in boot mode
+    Connect the usb cable
+   Hold BOOT.
+   Press and release RESET.
+   Keep holding BOOT for another second or two.
+   Release BOOT.
 
 2. Connect your microcontroller to the USB port of your computer.
 
