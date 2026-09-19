@@ -81,10 +81,10 @@ You can watch the Radio various versions and evolution here:
 2. Connect your microcontroller to the USB port of your computer.
 
 3. Put the microcontroller in boot mode
-- Hold BOOT.
-- Press and release RESET.
-- Keep holding BOOT for another second or two.
-- Release BOOT.
+ - Hold BOOT.
+ - Press and release RESET.
+ - Keep holding BOOT for another second or two.
+ - Release BOOT.
 
 4.Enter your email address and press continue
 
