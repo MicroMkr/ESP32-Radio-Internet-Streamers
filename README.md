@@ -8,7 +8,7 @@
 
 This is a fully functional Internet Radio Based on ESP32-S3 
 
-There are few versions avaliable:
+**There are few versions avaliable:**
 
 Version with Rotary Encoder or Touch Screen:
 
