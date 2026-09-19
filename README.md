@@ -74,9 +74,9 @@ In your web prowser open:  https://tmicromaker.com/MicroMaker_WebFlasher.html
 
 7. Restart the microcontroller and wait (it takes about 1~1.5 minutes to boot up on the first time).
 
+<br>
 
-
-##Radio Operation:
+**Radio Operation:**
 
 After flashing is finished:
 
