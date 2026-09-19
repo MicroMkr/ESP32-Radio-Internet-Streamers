@@ -7,10 +7,10 @@
 
 
 This is a fully functional Internet Radio Based on ESP32-S3 
+<br>
+<br>
 
 **There are few versions avaliable:**
-
-<br>
 
 Version with Rotary Encoder or Touch Screen:
 
