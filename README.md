@@ -35,7 +35,7 @@ Version with only Rotary Encoder (no option for touch screen):
 <img width="4032" height="2268" alt="IMG_4994" src="https://github.com/user-attachments/assets/b02f5701-7adf-4c5c-8062-8f69f8b3f6c6" />
 
 <br>
-
+<br>
 Version Based on ESP32-P4 with SPDIF out and WebUi Management Interface
 
 ![IMG_4602](https://github.com/user-attachments/assets/404d861e-c2d5-45e2-b299-c588e6edba75)
