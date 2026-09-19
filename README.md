@@ -1,5 +1,5 @@
 
-**Interested in building your own?**
+**Interested in building your own Internet Radio ?**
 
 **Firmware, DIY kits, and fully assembled units are available at:** [https://tmicromaker.com/](https://tmicromaker.com/shop-2/)
 
