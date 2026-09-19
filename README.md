@@ -76,7 +76,7 @@ In your web prowser open:  https://tmicromaker.com/MicroMaker_WebFlasher.html
 
 
 
-##**Radio Operation:**
+##Radio Operation:
 
 After flashing is finished:
 
