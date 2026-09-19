@@ -1,4 +1,4 @@
-# Internet Radio
+# Internet Radio ESP32
 
 
 **Interested in building your own Internet Radio ?**
