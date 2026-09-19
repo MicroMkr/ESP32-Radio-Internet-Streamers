@@ -64,7 +64,15 @@ In your web prowser open:  https://tmicromaker.com/MicroMaker_WebFlasher.html
    - Keep holding BOOT for another second or two.
    - Release BOOT.
 
-3. Press connect choose the right port and flash.
+3.Enter your email address and press continue
+
+4. Press connect choose the right port and flash.
+
+5. Press Install firmware
+
+6. wiat for the upload to finish
+
+7. Restart the microcontroller and wait (it takes about 1~1.5 minutes to boot up on the first time).
 
 
 
