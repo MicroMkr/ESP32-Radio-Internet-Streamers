@@ -92,7 +92,7 @@ You can watch the Radio various versions and evolution here:
 
 6. Press Install firmware
 
-7. wiat for the upload to finish
+7. Wait for the upload to finish
 
 8. Restart the microcontroller and wait (it takes about 1~1.5 minutes to boot up on the first time).
 
