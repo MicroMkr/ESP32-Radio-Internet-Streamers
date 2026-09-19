@@ -8,6 +8,8 @@
 
 This is a fully functional Internet Radio Based on ESP32-S3 
 
+There are few versions:
+
 Version with Rotary Encoder or Touch Screen:
 
 ![IMG_4870](https://github.com/user-attachments/assets/27eed72e-b462-4414-9c2e-7d4f0acef384)
