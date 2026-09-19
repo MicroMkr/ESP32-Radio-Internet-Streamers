@@ -75,25 +75,17 @@ You can watch the Radio various versions and evolution here:
 
 
 1. In your web prowser open:  https://tmicromaker.com/MicroMaker_WebFlasher.html
-
 <img width="642" height="1010" alt="firmware" src="https://github.com/user-attachments/assets/515fc0c8-b4f9-4527-b8c0-5d6a3a94a92c" />
-
 2. Connect your microcontroller to the USB port of your computer.
-
 3. Put the microcontroller in boot mode
    - Hold BOOT.
    - Press and release RESET.
    - Keep holding BOOT for another second or two.
    - Release BOOT.
-
-4.Enter your email address and press continue
-
+4. Enter your email address and press continue
 5. Press connect choose the right port and flash.
-
 6. Press Install firmware
-
 7. wiat for the upload to finish
-
 8. Restart the microcontroller and wait (it takes about 1~1.5 minutes to boot up on the first time).
 
 <br>
