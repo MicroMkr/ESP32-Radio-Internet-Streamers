@@ -10,9 +10,13 @@ This is a fully functional Internet Radio Based on ESP32-S3
 
 **There are few versions avaliable:**
 
+<br>
+
 Version with Rotary Encoder or Touch Screen:
 
 ![IMG_4870](https://github.com/user-attachments/assets/27eed72e-b462-4414-9c2e-7d4f0acef384)
+
+<br>
 
 Version with touch screen:
 
@@ -24,23 +28,32 @@ Version with touch screen:
 
 ![IMG_3576](https://github.com/user-attachments/assets/ca0a1ff1-3cd8-4685-a9a8-28e3d01f89e3)
 
+<br>
+
 Version with only Rotary Encoder (no option for touch screen):
 
 <img width="4032" height="2268" alt="IMG_4994" src="https://github.com/user-attachments/assets/b02f5701-7adf-4c5c-8062-8f69f8b3f6c6" />
 
+<br>
 
-Internet Radio Based on ESP32-P4 with SPDIF out and WebUi Management Interface
+Version Based on ESP32-P4 with SPDIF out and WebUi Management Interface
 
 ![IMG_4602](https://github.com/user-attachments/assets/404d861e-c2d5-45e2-b299-c588e6edba75)
+
+<br>
+<br>
 
 A repository where you can find documantation, various firmware version and enclosures 3D files, : 
 https://tinyurl.com/4yduvmdj
 
+<br>
 
 For any quations Email me to: tmicromaker@gmail.com
 
 Note: The Radio was designed to work only with ESP32S3 Lilygo t-displayS3 Touch or an ESP32-S3 and 170x320 touch screen that share the same caracteristics
 
+<br>
+<br>
 
 You can watch the Radio various versions and evolution here:
 
@@ -76,6 +89,7 @@ In your web prowser open:  https://tmicromaker.com/MicroMaker_WebFlasher.html
 7. Restart the microcontroller and wait (it takes about 1~1.5 minutes to boot up on the first time).
 
 <br>
+<br>
 
 **Radio Operation:**
 
@@ -108,6 +122,8 @@ Note: An I2S DAC is required for this project, Amplifier is optional.  Consult t
 
 Note: for some stations that don't play and their URL starts with https:// try to change it to http:// and check if it is working
 
+<br>
+<br>
 
 **DIY Instructions:**
 
