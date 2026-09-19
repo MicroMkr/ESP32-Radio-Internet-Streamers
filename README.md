@@ -50,7 +50,7 @@ https://tinyurl.com/4yduvmdj
 
 For any quations Email me to: tmicromaker@gmail.com
 
-Note: The Radio was designed to work only with ESP32S3 Lilygo t-displayS3 Touch or an ESP32-S3 and 170x320 touch screen that share the same caracteristics
+Note: The Radio was designed to work only with ESP32S3 Lilygo t-displayS3 family
 
 <br>
 <br>
