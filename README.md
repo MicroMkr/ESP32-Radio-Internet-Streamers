@@ -1,11 +1,12 @@
 # Internet Radio
 
 This is a fully functional Internet Radio Based on ESP32-S3 
-Features:
+**Features:**
 - Internet radio streaming
 - Touchscreen and rotary encoder control
 - Web-based configuration
-- 1000+ radio favorite stations 
+- Hundreds of thousands of stations to choose from
+- 1000 stations in your favorites list
 - MP3, AAC, FLAC, Vorbis and other audio formats
 - Bluetooth audio transmitter
 - ESP32-S3 and ESP32-P4 support
