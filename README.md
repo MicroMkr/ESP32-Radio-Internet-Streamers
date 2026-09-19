@@ -10,7 +10,6 @@ Features:
 - Bluetooth audio transmitter
 - ESP32-S3 and ESP32-P4 support
 <br>
-<br>
 
 **Interested in building your own Internet Radio ?**
 
