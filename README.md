@@ -1,6 +1,6 @@
 # Internet Radio
 
-This is a fully functional Internet Radio Based on ESP32-S3 
+Internet Radio - This is a fully functional Internet Radio Based on ESP32-S3 
 **Features:**
 - Internet radio streaming
 - Touchscreen and rotary encoder control
