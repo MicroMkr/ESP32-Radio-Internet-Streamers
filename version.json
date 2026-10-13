@@ -1,5 +1,5 @@
 {
   "version": "V1.5.9",
   "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V1.5.9/radio_firmware_V1.5.9.enc",
-  "changelog": "Improves boot time"
+  "changelog": "Fix manual firmware upload"
 }
