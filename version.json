@@ -1,5 +1,5 @@
 {
-  "version": "V1.5.9",
-  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V1.5.9/radio_firmware_V1.5.9.enc",
-  "changelog": "Fix manual firmware upload bug"
+  "version": "V1.6.0",
+  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V1.6.0/radio_firmware_V1.6.0.enc",
+  "changelog": "Flac Format Support"
 }
