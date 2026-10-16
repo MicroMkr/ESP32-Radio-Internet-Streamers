@@ -1,5 +1,5 @@
 {
-  "version": "V1.6.4",
-  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V1.6.4/radio_firmware_V1.6.4.enc",
+  "version": "V1.6.5",
+  "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V1.6.5/radio_firmware_V1.6.5.enc",
   "changelog": "Allows manual adjustment of Bluetooth TX to reduce interference with high-bitrate streams"
 }
