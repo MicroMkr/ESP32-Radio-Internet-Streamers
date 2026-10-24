@@ -1,5 +1,5 @@
 {
   "version": "V1.10.14",
   "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V1.10.14/radio_firmware_V1.10.14.enc",
-  "changelog": "Allows manual adjustment of Bluetooth TX to reduce interference with high-bitrate streams"
+  "changelog": "Three new display themes (skins) check the WebUi Screen Saver"
 }
