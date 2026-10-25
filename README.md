@@ -38,6 +38,16 @@ Version with touch screen:
 
 <br>
 
+Different skins to choose from:
+
+<img width="960" height="510" alt="image-1792887497259" src="https://github.com/user-attachments/assets/e34a92ef-2d1e-41bb-ad62-9c087291aabb" />
+<img width="960" height="510" alt="image-1792887507374" src="https://github.com/user-attachments/assets/de208984-eedd-42c6-8619-9ede10a15604" />
+<img width="960" height="510" alt="image-1792887519018" src="https://github.com/user-attachments/assets/7d6d966a-4ffd-46bc-862c-f1186f21dfb2" />
+<img width="1292" height="739" alt="Realistic White Radio with Bossa Nova Display (1)" src="https://github.com/user-attachments/assets/f1cc621d-0986-4610-a5b5-7ca22c67fda1" />
+<img width="1498" height="832" alt="ChatGPT Image Oct 25, 2026, 02_30_13 AM" src="https://github.com/user-attachments/assets/55f5f1b3-9f82-4e80-b9bf-3d9065ede27a" />
+
+<br>
+
 Version with only Rotary Encoder (no option for touch screen):
 
 <img width="4032" height="2268" alt="IMG_4994" src="https://github.com/user-attachments/assets/b02f5701-7adf-4c5c-8062-8f69f8b3f6c6" />
