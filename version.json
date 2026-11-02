@@ -1,5 +1,5 @@
 {
   "version": "V1.10.36",
   "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V1.10.36/radio_firmware_V1.10.36.enc",
-  "changelog": "Three new display Styles, Stations scrolling, Alarm clock Fix, Favorite Buttons + Firmware Upgrade via the Radio Menu"
+  "changelog": "Three new display Styles, Alarm clock Fix, Favorite Buttons, Firmware Upgrade via the Radio Menu"
 }
