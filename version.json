@@ -1,5 +1,5 @@
 {
   "version": "V1.10.39",
   "url": "https://github.com/MicroMkr/ESP32-Radio-Internet-Streamers/releases/download/V1.10.39/radio_firmware_V1.10.39.enc",
-  "changelog": "Improve RE favorite Buttons functionality + Adding Bluetooth connection via Radio Display"
+  "changelog": "In Hybrid, rotary mode a quick second click opens the full station list"
 }
